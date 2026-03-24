@@ -1,0 +1,149 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    /* remove a rolagem */
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+.hover-area {
+    position: fixed;
+    top: 75%;
+    left: 55%;
+    transform: translateX(-50%);
+    /* 🔥 corrige posição */
+    width: 200px;
+    height: 80px;
+    z-index: 3;
+    cursor: default;
+}
+
+
+
+
+#RAVEN {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    position: fixed;
+    font-size: 190px;
+    color: white;
+    cursor: pointer;
+    /* deixa visual que dá pra clicar */
+    z-index: 5;
+    /* acima da overlay */
+}
+
+.overlay.active #RAVEN {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: auto;
+    /* 🔥 importante */
+    transition: opacity 0.4s ease;
+
+    z-index: 2;
+}
+
+.overlay.active {
+    opacity: 1;
+}
+
+#dentro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    filter: brightness(50%);
+    z-index: 10;
+}
+
+#corvo {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    width: 170px;
+    filter: brightness(50%);
+    z-index: 11;
+    transform: translate(-70%, -13%) scale(0.1);
+    opacity: 0;
+    transition: all 1s ease;
+    display: none;
+    cursor: pointer;
+}
+
+#corvo.ativo {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+}
+
+
+#quadro {
+    position: absolute;
+    top: 1%;
+    left: 59%;
+    width: 225px;
+    transform: rotate(-10deg);
+    transform-origin: center;
+    filter: brightness(50%);
+    z-index: 12;
+    display: none;
+    cursor: pointer;
+
+}
+
+#poltrona {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+    width: 210px;
+    filter: brightness(55%);
+    z-index: 12;
+    display: none;
+    cursor: pointer;
+
+}
+
+.infos {
+    margin-top: -10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.MeuTitulo {
+    margin-top: -40px;
+    font-family: 'Luxurious Script', cursive;
+    font-size: 50px;
+    color: black;
+}
