@@ -147,3 +147,15 @@ video {
     font-size: 50px;
     color: black;
 }
+
+#sair{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+    filter: brightness(60%);
+
+}
