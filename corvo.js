@@ -53,7 +53,7 @@ $(document).ready(function () {
                 $("#quadro").fadeIn(600).css("transform", "rotate(-10deg)");
                 animarElemento("#quadro");
 
-            }, 300);
+            }, 600);
 
             setTimeout(() => {
                 $("#poltrona").fadeIn(600);
@@ -125,21 +125,17 @@ $(document).ready(function () {
 
     $("#sair").click(function () {
 
-        // some com os elementos internos
         $("#corvo, #quadro, #poltrona").fadeOut(300);
         $("#dentro").fadeOut(500);
+        $("#sair").fadeOut(300);
 
-        // remove animações (reset)
         $("#corvo").removeClass("ativo");
 
-        // mostra tela inicial
         $("#RAVEN").fadeIn(800);
         $("#bg-video").fadeIn(800);
         $(".hover-area").fadeIn(800);
         $(".overlay").fadeIn(800);
-
-        // esconde o botão
-        $("#sair").fadeOut(300);
+        
     });
 
 
